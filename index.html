@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>TWICE 介紹</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #fff5f7;
+}
+
+/* 封面 */
+.hero {
+    background-image: url('https://media.vogue.com.tw/photos/68dbda5a221d9e83a276364e/2:3/w_2560%2Cc_limit/557637162_1381316683352217_7506352377307564150_n.jpg');
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 70px;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: hotpink;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* 區塊 */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 成員區 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.member {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.aaa {
+    background-color: #80DFFF;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 首頁 -->
+<div class="hero">
+    <h1>TWICE</h1>
+    <p>韓國人氣女子團體</p>
+    <a class="btn" href="#intro">了解更多</a>
+</div>
+
+<!-- 團體介紹 -->
+<section id="intro">
+    <div class="box">
+        <h2>團體介紹</h2>
+        <p>TWICE 是由 JYP Entertainment 於 2015 年推出的韓國女子團體，以活潑風格與洗腦歌曲聞名。</p>
+    </div>
+</section>
+
+<!-- 成員 -->
+<section>
+    <h2>成員介紹</h2>
+
+    <div class="grid">
+
+        <div class="member">娜璉 (Nayeon)</div>
+        <div class="member">定延 (Jeongyeon)</div>
+        <div class="member">Momo</div>
+        <div class="member">Sana</div>
+        <div class="member">志效 (Jihyo)</div>
+        <div class="member">Mina</div>
+        <div class="member">多賢 (Dahyun)</div>
+        <div class="member">彩瑛 (Chaeyoung)</div>
+        <div class="member">子瑜 (Tzuyu)</div>
+
+  </div>
+</section>
+
+<!-- 歌曲 -->
+<section>
+    <div class="box">
+        <h2>代表歌曲</h2>
+        <p>🎵 TT</p>
+        <p>🎵 Cheer Up</p>
+        <p>🎵 Fancy</p>
+        <p>🎵 Feel Special</p>
+    </div>
+</section>
+
+<!-- 圖片 -->
+<section>
+    <div class="box">
+        <h2>團體照片</h2>
+        <img src="https://i.beauty321.com/812x/https://il.beauty321.com/gallery/articleIMG/AL_70348.jpg?t=20251130040128">
+    </div>
+</section>
+
+</body>
+</html>

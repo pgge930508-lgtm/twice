@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<title>TWICE 介紹</title>
+<title>11102135TWICE 介紹</title>
 
 <style>
 body {
@@ -13,8 +13,9 @@ body {
 
 /* 封面 */
 .hero {
-    background-image: url('https://media.vogue.com.tw/photos/68dbda5a221d9e83a276364e/2:3/w_2560%2Cc_limit/557637162_1381316683352217_7506352377307564150_n.jpg');
+    background-image: url('https://www.nme.com/wp-content/uploads/2025/07/twice-this-is-for-interview-credit-jyp-entertainment-image3.jpg');
     background-size: cover;
+    background-position: center;
     height: 100vh;
     color: white;
     text-align: center;
@@ -61,15 +62,53 @@ img {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
 }
+
 .member {
     background: white;
-    padding: 10px;
     border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
-.aaa {
-    background-color: #80DFFF;
+
+.member:hover {
+    transform: scale(1.05);
+}
+
+.member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.member p {
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* 彈出視窗 */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    width: 70%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
 }
 </style>
 
@@ -94,21 +133,56 @@ img {
 
 <!-- 成員 -->
 <section>
-    <h2>成員介紹</h2>
+    <h2>成員介紹（點擊查看）</h2>
 
     <div class="grid">
 
-        <div class="member">娜璉 (Nayeon)</div>
-        <div class="member">定延 (Jeongyeon)</div>
-        <div class="member">Momo</div>
-        <div class="member">Sana</div>
-        <div class="member">志效 (Jihyo)</div>
-        <div class="member">Mina</div>
-        <div class="member">多賢 (Dahyun)</div>
-        <div class="member">彩瑛 (Chaeyoung)</div>
-        <div class="member">子瑜 (Tzuyu)</div>
+        <div class="member" onclick="showInfo('娜璉 Nayeon','擔任領唱及領舞，2022年6月24日以首張個人迷你專輯《IM NAYEON》作為團內第一位Solo出道的成員，擁有甜美笑容與活潑魅力。')">
+            <img src="https://img.ltn.com.tw/Upload/ent/page/800/2022/05/26/phpq93Zg9.jpg">
+            <p>娜璉</p>
+        </div>
 
-  </div>
+        <div class="member" onclick="showInfo('定延 Jeongyeon','以穩定歌唱實力與帥氣形象受到喜愛。')">
+            <img src="https://imgnews.pstatic.net/image/311/2026/05/19/0002012931_001_20260519135415068.jpg?type=w647">
+            <p>定延</p>
+        </div>
+
+        <div class="member" onclick="showInfo('Momo','來自日本京都，是分隊MISAMO的成員，在隊內擔任主舞、副唱及副饒舌。')">
+            <img src="https://imgproxy.poponote.app/1/auto/850/0/sm/0/aHR0cHM6Ly9hc3NldHMucG9wb25vdGUuYXBwL25vdGUvNjZhODRjZTA1ZWRhOTAwMDA4ZTY1Yzg0L21lZGlhLzY2YTg1NjE2OTU0NWE2MDAwN2VhM2ZlNQ==">
+            <p>Momo</p>
+        </div>
+
+        <div class="member" onclick="showInfo('Sana','來自日本大阪，以可愛魅力和高人氣聞名，分隊MISAMO的成員，在隊內擔任副唱。')">
+            <img src="https://prd-cdn.jessicahk.com/3_05d85fc18a.jpg">
+            <p>Sana</p>
+        </div>
+
+        <div class="member" onclick="showInfo('志效 Jihyo','TWICE 隊長兼主唱，練習生時期超過十年，2023年8月18日，以首張個人迷你專輯《ZONE》Solo出道。')">
+            <img src="https://www.ulightdj.tv/plugin/froala/upload/eac52a508f38cce6644a2f394a30116d7467cfe5.jpg">
+            <p>志效</p>
+        </div>
+
+        <div class="member" onclick="showInfo('Mina','來自日本兵庫縣，氣質優雅，擅長芭蕾舞，在隊內擔任主舞及副唱，2023年起成為TWICE子團MISAMO的成員之一。')">
+            <img src="https://m.media-amazon.com/images/M/MV5BNTMxZmM0YzctZjkzNC00Mjc5LThlZjMtMDI0NDUxOTM1MjQ0XkEyXkFqcGc@._V1_.jpg">
+            <p>Mina</p>
+        </div>
+
+        <div class="member" onclick="showInfo('多賢 Dahyun','團體中的氣氛製造者，綜藝感十足，隊內擔任領饒舌及副唱，2024年以演員身分出道。')">
+            <img src="https://cdn.diodeo.jp/cdn/webzine/2020/05/20/20200520110555_qelhncwf.jpg">
+            <p>多賢</p>
+        </div>
+
+        <div class="member" onclick="showInfo('彩瑛 Chaeyoung','擔任主Rapper及副唱，曾為多首歌曲填詞及創作饒舌部分，也是團隊內首位參與韓文及日文歌曲創作的成，2025年9月12日推出第一張個人專輯《LIL FANTASY vol.1》。')">
+            <img src="https://media.nownews.com/nn_media/thumbnail/2025/07/1751766642465-de3556d775f5494181e716647467b06b-960x675.webp?unShow=false">
+            <p>彩瑛</p>
+        </div>
+
+        <div class="member" onclick="showInfo('周子瑜 Tzuyu','來自台灣台南，在隊內擔任領舞、副唱及忙內，2024年9月6日，以首張個人迷你專輯《abouTZU》開始個人事業。')">
+            <img src="https://cdn-origin.cool-style.com.tw/cool/2025/06/GunpYGMaoAAnd3I-scaled.jpeg">
+            <p>子瑜</p>
+        </div>
+
+    </div>
 </section>
 
 <!-- 歌曲 -->
@@ -122,13 +196,35 @@ img {
     </div>
 </section>
 
-<!-- 圖片 -->
+<!-- 團體照片 -->
 <section>
     <div class="box">
         <h2>團體照片</h2>
-        <img src="https://www.huf.org.tw/sites/default/files/content/image/圖片A2.png" alt="" width="900" height="600" class="aaa"/> <span class="back" onclick="hideAll()">← 回首頁</span>
+        <img src="https://zeekmagazine.com/wp-content/uploads/2025/09/1758345362-a18c6653ff456bdab53dfefd9d513967.jpg">
     </div>
 </section>
+
+<!-- Popup -->
+<div class="popup" id="popup" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+        <h2 id="popupTitle"></h2>
+        <p id="popupText"></p>
+        <br>
+        <button onclick="closePopup()">關閉</button>
+    </div>
+</div>
+
+<script>
+function showInfo(name, info) {
+    document.getElementById("popupTitle").innerHTML = name;
+    document.getElementById("popupText").innerHTML = info;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
 
 </body>
 </html>
